@@ -197,7 +197,10 @@ def update(frame,smb,inf,t):
 
     print("Hari ke",frame,":",int(terinfeksi),"Terinfeksi")
 
-    
+    #kondisi stop jika jumlah terinfeksi sudah 0
+    if terinfeksi == 0:
+        animation.event_source.stop()
+
     # Update Plot
     smb.append(recover)
     inf.append(terinfeksi)
